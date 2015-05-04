@@ -61,15 +61,37 @@ p {
     font-size: 2em;
     text-align: left;
     margin: 0;
-    paddingL 0;
+    padding: 0;
 }
 
-ul li {
-    font-family: 'OpenSansLight', sans-serif;   
-    font-size: 2em;
-    text-align: left;
-    margin: 0;
-    padding: 0;
+#nav {
+    width: 100vw;
+    background-color: #444;
+    padding: 15px 10px 5px 10px;
+}
+
+#nav ul {
+    list-style: none; 
+}
+
+#nav li {
+    font-family: 'BebasNeueRegular', sans-serif;   
+    font-size: 2.5em;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+#nav #logo {
+    float: left;
+    font-family: 'BebasNeueBold', sans-serif;
+    font-size: 3em;
+    padding-right: 20vw;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block; 
 }
 
 .content {
