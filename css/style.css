@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'BebasNeueBold';
+    src: url('css/type/BebasNeueBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('css/type/BebasNeueRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('css/type/OpenSansLight.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'BebasNeueBold', sans-serif;
+    font-size: 15em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: 'BebasNeueRegular', sans-serif; 
+    font-size: 8em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-family: 'BebasNeueRegular', sans-serif;
+    font-size: 5em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h4 {
+    font-family: 'BebasNeueRegular', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'OpenSansLight', sans-serif;
+    font-size: 2em;
+    text-align: left;
+    margin: 0;
+    paddingL 0;
+}
+
+ul li {
+    font-family: 'OpenSansLight', sans-serif;   
+    font-size: 2em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 60%;
+}
+
+#header {
+    position: absolute;
+    bottom: 0;
+}
+
+#Landing-Page {
+    /*padding: 200px 0 260px 0;*/
+    background-color: #F4C2C2;
+    height: 100vh;
+}
+
+#Landing-Page .content {
+    padding: 200px 0 260px 0;
+    color: white;
+}
+
+
+
+
+
+
