@@ -1,0 +1,190 @@
+<!-- 
+
+=== TODO ===
+* Figure Out Custom Axis Titles, Labels
+* Figure Out Scale for Chart3
+* Finalize animations (Chart1 - Grow, Chart2 - Labels/Rate, sparkle?, Chart3 -  Draw One At a Time)
+* Figure Out Why Plugin (Labels) Are Not Showing
+* Finalize Colors
+* Adding in chart callouts
+* Test Across Browsers (add in animation, check about SCSS for DRY)
+* Test Across Screen Sizes (media queries, check about SCSS for DRY)
+* Integrate into Website (colors, size, cue to grow)
+
+=== LIMITATIONS ===
+* No Axis Labels 
+* No Logarithmic Scale https://github.com/gionkunz/chartist-js/issues/64
+
+=== USEFUL LINKS ===
+http://gionkunz.github.io/chartist-js/index.html
+http://www.smashingmagazine.com/2014/12/16/chartist-js-open-source-library-responsive-charts/ 
+https://libraries.io/bower/chartist-plugin-pointlabels 
+
+CHART1 - Hemodyanmics http://ultiva.com/WhereToUseULTIVA/NeuroEP/Hemodynamics.aspx
+CHART2 - Rapid Recovery http://ultiva.com/WhyToUseULTIVA/Recovery.aspx
+CHART3 - No Accumulation http://ultiva.com/WhyToUseULTIVA/Elimination.aspx
+
+--> 
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+    <script src="bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js"></script>
+    <!--
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	<link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" /> -->
+  </head>
+</html>
+
+
+<strong>HEMODYNAMICS</strong></br>
+More anesthesiologists gave Remi an "excellent" rating for hemodynamic profile than fentanyl. </br>
+Y-Axis: Percentage of Excellent Ratings
+<div class="ct-chart ct-perfect-fourth" id="chart1"></div>
+
+<strong>RAPID RECOVERY</strong></br>
+More patients achieved a normal recovery score with Remi compared to Fentanyl</br>
+X-Axis: Time (minutes) </br>
+Y-Axis: Percentage of Patients Receiving a Normal Recovery Score </br>
+Callouts: 65% normal at 15 min </br>
+<div class="ct-chart ct-perfect-fourth" id="chart2"></div>
+
+<strong>NO ACCUMULATION</strong></br>
+Concentration of Remi falls rapidly after discontinuation</br>
+X-Axis: Time (minutes) </br>
+Y-Axis: Mean (SD) Concentration (ng/mL) </br>
+Legend: ULTIVA (n=6) vs. Alfentanil</br>
+Callouts: ULTIVA has .5 mcg/kg/min, Alfentanil has .05 mcg/kg/min </br>
+<div class="ct-chart ct-perfect-fourth" id="chart3"></div>
+
+<style>
+
+#chart1
+{
+	  width: 400px;
+}
+
+#chart1 .ct-bar {
+  stroke-width: 50px;
+}
+
+/* http://stackoverflow.com/questions/12265096/css3-animation-not-working-in-chrome */
+
+#chart2
+{
+	  width: 400px;
+}
+
+@keyframes dashoffset-seven 
+{
+  0% {
+    stroke-dashoffset: 7px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes dashoffset-seven 
+{
+  0% {
+    stroke-dashoffset: 7px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+#chart2 .ct-series.ct-series-a .ct-line {
+  stroke-width: 3px;
+  stroke-dasharray: 5px 2px;
+  -webkit-animation: dashoffset-seven 400ms infinite linear;
+  animation: dashoffset-seven 400ms infinite linear;
+}
+
+#chart2 .ct-series.ct-series-b .ct-line {
+  stroke-width: 3px;
+  stroke-dasharray: 5px 2px;
+  -webkit-animation: dashoffset-seven 1600ms infinite linear;
+  animation: dashoffset-seven 1600ms infinite linear;
+}
+
+
+#chart3
+{
+	  width: 400px;
+}
+
+.ct-chart .ct-label.ct-horizontal {
+  text-align: center;
+}
+
+</style>
+
+<script>
+var data1 = {
+  // A labels array that can contain any sort of values
+  labels: ['ULTIVA', 'Fentanyl'],
+  // Our series array that contains series objects or in this case series data arrays
+  series: [
+    [47, 23]
+  ]
+};
+
+var data2 = {
+  // A labels array that can contain any sort of values
+  labels: ['0', '15', '30', '45', '60'],
+  // Our series array that contains series objects or in this case series data arrays
+  series: [
+    [0, 65, 81, 81, 84], 
+    [0, 45, 61, 61, 65]
+  ]
+};
+
+/* https://github.com/gionkunz/chartist-js/issues/64 */
+var data3 = {
+  // A labels array that can contain any sort of values
+  labels: [0, 60, 120, 180, 240, 300, 360, 420, 480],
+  // Our series array that contains series objects or in this case series data arrays
+  series: [
+    [0, 20, 40, 80, 90, 50, 10, 10, 5],
+    [0, 1.8, 2.2, 2, 2.4, 0, 0, 0, 0]
+  ]
+};
+
+// Create a new line chart object where as first parameter we pass in a selector
+// that is resolving to our chart container element. The Second parameter
+// is the actual data object.
+var barchart = new Chartist.Bar('#chart1', data1, {seriesBarDistance: 12, low: 0, high: 60});
+
+barchart.on('draw', function(data) {
+  if(data.type === 'bar') {
+    data.element.animate({
+      y2: {
+        dur: 3000,
+        from: data.y1,
+        to: data.y2,
+        easing: Chartist.Svg.Easing.easeOutQuint
+      },
+      opacity: {
+        dur: 3000,
+        from: 0,
+        to: 1,
+        easing: Chartist.Svg.Easing.easeOutQuint
+      }
+    });
+  }
+});
+
+new Chartist.Line('#chart2', data2, {lineSmooth: false, showPoint: false}, { 
+  plugins: [
+ Chartist.plugins.ctPointLabels({
+      textAnchor: 'middle'
+    })
+  ]
+});
+new Chartist.Line('#chart3', data3);
+</script>
