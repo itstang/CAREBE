@@ -66,7 +66,7 @@ p {
 
 #nav {
     width: 100vw;
-    background-color: #444;
+    background-color: #2A2A2A;
     padding: 15px 10px 5px 10px;
 }
 
@@ -107,15 +107,73 @@ p {
     bottom: 0;
 }
 
+.slide {
+    height: 100vh;   
+}
+
 #Landing-Page {
-    /*padding: 200px 0 260px 0;*/
     background-color: #F4C2C2;
-    height: 100vh;
 }
 
 #Landing-Page .content {
     padding: 200px 0 260px 0;
     color: white;
+}
+
+#Why-Use-Ultiva {
+    background-image: url("../img/background_1.jpg");
+    background-size: cover; 
+}
+
+#Why-Use-Ultiva .content {
+    color: white;
+    text-align: left;
+    padding-top: 18%;
+}
+
+#Why-Use-Ultiva .content h3 {
+    text-align: left;
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 120px 80px 120px 80px;
+}
+
+#Rapid-On, #Rapid-Off {
+    background-color: #2A2A2A;
+}
+
+#Rapid-On .content, #Rapid-Off .content, #Rapid-Response .content{
+    color: white;
+    padding-top: 20%;
+}   
+
+#Rapid-Response {
+    background-image: url("../img/background_2.jpg");   
+    background-size: cover;
+}
+
+#Rapid-Response .content h4{
+    background-color: rgba(128, 128, 128, 0.6);
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#Rapid-Response .content h3 {
+    background-color: rgba(128, 128, 128, 0.6);
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+}
+#Rapid-Response .content p {
+    background-color: rgba(128, 128, 128, 0.6);
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 40px;
+}
+
+#Rapid-Recovery {
+    background-image: url("../img/background_3.jpg");
+    background-size: cover;
+    
 }
 
 
