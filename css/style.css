@@ -56,6 +56,7 @@ h4 {
     padding: 0;
 }
 
+
 p {
     font-family: 'OpenSansLight', sans-serif;
     font-size: 2em;
@@ -64,10 +65,20 @@ p {
     padding: 0;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 #nav {
     width: 100vw;
     background-color: #2A2A2A;
-    padding: 15px 10px 5px 10px;
+    padding: 20px 10px 15px 10px;
+}
+
+ul li {
+    font-family: 'OpenSansLight', sans-serif;
+    font-size: 2em;
 }
 
 #nav ul {
@@ -76,7 +87,7 @@ p {
 
 #nav li {
     font-family: 'BebasNeueRegular', sans-serif;   
-    font-size: 2.5em;
+    font-size: 2em;
     display: inline-block;
     padding-right: 50px;
 }
@@ -84,7 +95,7 @@ p {
 #nav #logo {
     float: left;
     font-family: 'BebasNeueBold', sans-serif;
-    font-size: 3em;
+    font-size: 2.5em;
     padding-right: 20vw;
 }
 
@@ -176,7 +187,119 @@ p {
     
 }
 
+#Rapid-Recovery .content {
+    color: white;
+    padding-top: 18%;
+}
 
+#Rapid-Recovery .content h3 {
+    background-color: rgba(128, 128, 128, 0.6); 
+    padding-top: 30px;
+}
+
+#Rapid-Recovery .content p {
+    background-color: rgba(128, 128, 128, 0.6); 
+    padding-left: 70px;
+    padding-right: 20px;
+}
+
+#Rapid-Recovery .content ul {
+    background-color: rgba(128, 128, 128, 0.6); 
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 100px;
+}
+
+#No-Accumulation {
+    background-color: #96DED1;
+}
+
+#No-Accumulation .content {
+    color: white;
+    padding-top: 18%;
+}
+
+#No-Accumulation .content ul {
+    padding-left: 30px;   
+}
+
+#Synergistic-Effect {
+    background-image: url('../img/background_4.jpg');
+    background-size: cover;
+}
+
+#Synergistic-Effect .content {
+    color: white;
+    padding-top: 15%;
+}
+
+
+#Synergistic-Effect h3, #Synergistic-Effect p, #Synergistic-Effect ul {
+    background-color: rgba(128, 128, 128, 0.6); 
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+#Synergistic-Effect h3 {
+    padding-top: 30px;  
+}
+
+#Synergistic-Effect ul {
+    padding-bottom: 35px;
+    padding-left: 95px;
+}
+
+#Hemodynamics {
+    background-image: url('../img/background_5.jpg');
+    background-size: cover;
+    
+}
+
+#Hemodynamics .content {
+    color: white;
+    padding-top: 20%;
+}
+
+#Hemodynamics h3 {
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 30px 0 0 0;
+}
+
+#Hemodynamics p {
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 0 50px 30px 50px;
+}
+
+#Applicable-Surgeries {
+    background-color: #2A2A2A;   
+}
+
+#Applicable-Surgeries .wrapper {
+    padding-top: 5%;
+    color: white;
+    column-count: 2;
+}
+
+#Applicable-Surgeries ul{
+    padding-left: 30%;
+    list-style-type: none;
+}
+
+#Applicable-Surgeries li {
+    font-family: "BebasNeueRegular", sans-serif;
+    padding-top: 7%;
+    font-size: 3em;
+}
+
+#surgeries a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+#End-Page {
+    background: linear-gradient(180deg, #F4C2C2 50%, #2A2A2A 50%);
+}
 
 
 
