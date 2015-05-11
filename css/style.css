@@ -84,10 +84,10 @@ ul li {
 
 #nav ul {
     list-style: none;
+    float: right;
 }
 
 #nav .nav-links li {
-    float: right;
     font-family: 'BebasNeueRegular', sans-serif;
     font-size: 2em;
     display: inline-block;
@@ -98,7 +98,6 @@ ul li {
     float: left;
     font-family: 'BebasNeueBold', sans-serif;
     font-size: 2.5em;
-    padding-right: 20vw;
 }
 
 #nav a {
@@ -107,16 +106,8 @@ ul li {
     display: block;
 }
 
-/* .content {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    max-width: 60%;
-} */
-
 .content {
-  width: 89.6%;
+  width: 90%;
   margin: 0 auto;
 }
 
