@@ -7,9 +7,10 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-        <!-- <script type="text/javascript" src="js/jquery/dist/jquery.min.js"></script> -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+        <script type="text/javascript" src="js/jquery/dist/jquery.min.js"></script>
         <script src="//code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/jquery/FlowType.JS/flowtype.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
     </head>
     <body>
         
@@ -132,7 +133,31 @@
         <div id="Applicable-Surgeries" class="slide">
             <div class="wrapper">
                 <h3>So where does ULTIVA fit in your practice?</h3>
-                <div class="list_wrapper">
+                
+                <div id="gridwrapper">
+                    <div class="pure-g surgeries">
+                        <div class="pure-u-1-4"><img class="specs" id="neuro_specs" src="img/neuro_specs.svg"></div>
+                        <div class="pure-u-1-4 fade"><img id="neuro_button" src="img/icon_neuro.svg"></div>
+                        <div class="pure-u-1-4 fade"><img id="ortho_button" src="img/icon_ortho.svg"></a></div>
+                        <div class="pure-u-1-4"><img class="specs" id="ortho_specs" src="img/ortho_specs.svg"></div>
+                    </div>
+                
+                    
+                    <div class="pure-g surgeries">
+                        <div class="pure-u-1-4"><img class="specs" id="cardio_specs" src="img/cardio_specs.svg"></div>
+                        <div class="pure-u-1-4 fade"><img id="cardio_button" src="img/icon_cardio.svg"></div>
+                        <div class="pure-u-1-4 fade"><img id="abs_button" src="img/icon_abs.svg"></div>
+                        <div class="pure-u-1-4"><img class="specs" id="abs_specs" src="img/abs_specs.svg"></div>
+                    </div>
+                
+                    <div class="pure-g surgeries">
+                        <div class="pure-u-1-4"><img class="specs" id="headneck_specs" src="img/headneck_specs.svg"></div>
+                        <div class="pure-u-1-4 fade"><img id="headneck_button" src="img/icon_headneck.svg"></div>
+                        <div class="pure-u-1-4 fade"><img id="highrisk_button" src="img/icon_highrisk.svg"></div>
+                        <div class="pure-u-1-4"><img class="specs" id="highrisk_specs" src="img/highrisk_specs.svg"></div>
+                    </div>
+                </div>
+                <!-- div class="list_wrapper">
                     <ul>
                         <li><a href="#Neuro"><img src="img/icon_neuro.svg">Neuro/EP</a></li>
                         <li><a href="#Orthopedic"><img src="img/icon_ortho.svg">Orthopedic</a></li>
@@ -147,7 +172,7 @@
                         <li><a href="#Headneck"><img src="img/icon_headneck.svg">Head &amp; Neck</a></li>
                         <li><a href="#Highrisk"><img src="img/icon_highrisk.svg">High Risk Patients</a></li>
                     </ul>
-                </div>
+                </div -->
             </div>
         </div>
         

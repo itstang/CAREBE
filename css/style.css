@@ -251,8 +251,7 @@ ul li {
 
 #Hemodynamics {
     background-image: url('../img/background_5.jpg');
-    background-size: cover;
-    
+    background-size: cover; 
 }
 
 #Hemodynamics .content {
@@ -279,7 +278,40 @@ ul li {
     color: white;
 }
 
-#Applicable-Surgeries .list_wrapper {
+#Applicable-Surgeries .specs {
+    display: none;   
+}
+
+#gridwrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.surgeries {
+    padding-top: 30px;
+}
+
+.surgeries img {
+    height: 200px;
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+ 
+
+
+
+
+/*#Applicable-Surgeries .list_wrapper {
     margin: 0 auto;
     width: 80%;
     
@@ -304,7 +336,7 @@ ul li {
     color: white;
     text-decoration: none;
     font-family: "BebasNeueRegular", sans-serif;
-}
+}*/
 
 
 /* Surgery page stylings
