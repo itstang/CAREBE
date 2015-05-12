@@ -382,7 +382,6 @@ ul li {
 #Hemodynamics {
     background-image: url('../img/background_5.jpg');
     background-size: cover;
-
 }
 
 #Hemodynamics .content {
@@ -405,28 +404,174 @@ ul li {
 }
 
 #Applicable-Surgeries .wrapper {
-    padding-top: 5%;
-    color: white;
-    column-count: 2;
-}
-
-#Applicable-Surgeries ul{
-    padding-left: 30%;
-    list-style-type: none;
-}
-
-#Applicable-Surgeries li {
-    font-family: "BebasNeueRegular", sans-serif;
     padding-top: 7%;
-    font-size: 3em;
-}
-
-#surgeries a {
-    list-style: none;
-    text-decoration: none;
     color: white;
 }
+
+#Applicable-Surgeries .specs {
+    display: none;
+}
+
+#gridwrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.surgeries {
+    padding-top: 30px;
+}
+
+.surgeries img {
+    height: 200px;
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+
+
+
+/*#Applicable-Surgeries .list_wrapper {
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+#Applicable-Surgeries ul {
+    display: inline-block;
+}
+
+#Applicable-Surgeries ul img {
+    height: 4em;
+}
+
+#Applicable-Surgeries li{
+    padding-top: 100px;
+    font-size: 3em;
+    list-style: none;
+    display: block;
+}
+
+#Applicable-Surgeries a {
+    color: white;
+    text-decoration: none;
+    font-family: "BebasNeueRegular", sans-serif;
+}*/
+
+
+/* Surgery page stylings
+
+
+#Neuro, #Orthopedic, #Cardiothoracic, #Abdominal, #Headneck, #Highrisk {
+    background-color: #2A2A2A;
+
+}
+
+.surgeryWrapper {
+    padding-left: 350px;
+    padding-top: 50px;
+
+}
+
+.surgeryWrapper img {
+   padding-top: 150px;
+   height: 400px;
+   margin: auto;
+}
+
+.surgeryWrapper h2 {
+    text-align: left;
+    padding-top: 50px;
+    max-width: 400px;
+}
+
+#Neuro h2 {
+    color: #f7941e;
+    padding-left: 10px;
+}
+
+#Orthopedic h2 {
+    font-size: 6.5em;
+    padding-left: 10px;
+    color: #39b54a;
+}
+
+#Cardiothoracic h2 {
+    color: #2e3192;
+    font-size: 5em;
+
+}
+
+#Abdominal h2 {
+    color: #662d91;
+    font-size: 7.5em;
+}
+
+#Headneck h2 {
+    color: #dfe260;
+    font-size: 6.3em;
+}
+
+#Highrisk h2 {
+    color: #ed1c24;
+    font-size: 4em;
+    padding-left: 7px;
+}
+
+End Surgery page stylings */
+
+
+
+
 
 #End-Page {
-    /*background: linear-gradient(180deg, #F4C2C2 50%, #2A2A2A 50%);*/
+    height: 100vh;
+    background: linear-gradient(180deg, #F4C2C2 50%, #2A2A2A 50%);
+}
+
+#Countdown {
+    padding-top: 40px;
+    color: white;
+}
+
+#Countdown h2 {
+    font-size: 12em;
+}
+
+#Countdown p {
+    font-size: 1em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#Sign-Up {
+    position: static;
+    padding-top: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#Sign-Up h3 {
+    text-align: left;
+    font-size: 4.9em;
+    color: white;
+}
+
+form {
+    padding-top: 20px;
+}
+
+form input {
+    height: 80px;
+    font-size: 45px;
 }
