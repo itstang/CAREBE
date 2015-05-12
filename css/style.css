@@ -25,6 +25,28 @@ body {
     width: 100%;
 }
 
+/* Background CSS for IV Drip line */
+body:before, body:after {
+  content: '';
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50%;
+  width: 89.8%;
+  z-index: -100;
+}
+
+body:before {
+  top: 0;
+  background-color: #4FC3F7;
+}
+
+body:after {
+  top: 50%;
+  background-color: #ddd;
+  margin-bottom: -400px;
+}
+
 h1 {
     font-family: 'BebasNeueBold', sans-serif;
     font-size: 15em;
@@ -70,6 +92,14 @@ ul {
     margin: 0;
 }
 
+#header {
+    background-color: #2A2A2A;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+}
+
 #nav {
     width: 80%;
     height: 64px;
@@ -87,11 +117,21 @@ ul li {
     float: right;
 }
 
+#nav ul:before, ul:after {
+  content: '';
+  display: table;
+}
+
+#nav ul:after {
+  clear: both;
+}
+
 #nav .nav-links li {
     font-family: 'BebasNeueRegular', sans-serif;
     font-size: 2em;
     display: inline-block;
     padding-left: 50px;
+    float: left;
 }
 
 #nav .title-area {
@@ -106,21 +146,70 @@ ul li {
     display: block;
 }
 
-.content {
-  width: 90%;
-  margin: 0 auto;
+@media screen and (max-width: 700px) {
+  #header {
+    height: auto;
+  }
+
+  #nav {
+    width: 100%;
+  }
+
+  #nav .title-area {
+    width: 100%;
+  }
+
+  #nav .title-area li#logo {
+    padding-left: 50px;
+  }
+
+  #nav ul {
+    float: none;
+    margin: 0;
+  }
+
+  #nav ul li {
+    width: 100%;
+    diplay: block;
+    margin: 0;
+    border-bottom: 1px solid gray;
+  }
 }
 
-#header {
-    background-color: #2A2A2A;
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-    z-index: 100;
+.content {
+  position: absolute;
+  width: 90%;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .slide {
+    position: relative;
     height: 100vh;
+    z-index: 2;
+}
+
+.slide:before, .slide:after {
+    content: '';
+		position: absolute;
+		width: 55px;
+		right: 100%;
+		z-index: 2;
+}
+
+.slide:before {
+    top: 0;
+		background-repeat: no-repeat;
+}
+
+.slide:after {
+    top: 0;
+		bottom: 0;
+    left: 110px;
+    background-image: url('../img/iv-bg.svg');
+    background-repeat: repeat-y;
 }
 
 #Landing-Page {
@@ -131,28 +220,32 @@ ul li {
 
 #Landing-Page .ivbag {
   position: absolute;
-  height: 50%;
-  width: 50%;
+  height: 900px;
   bottom: 0;
+  left: 20px;
   z-index: -1;
 }
 
 #Landing-Page .content {
-    padding: 200px 0 260px 0;
     text-align: left;
     color: white;
     z-index: 2;
 }
 
+#Landing-Page:before, #Landing-Page:after {
+  content: '';
+  background: none;
+}
+
 #Why-Use-Ultiva {
-    background-image: url("../img/background_1.jpg");
-    background-size: cover;
+    background: url("../img/background_1.png") no-repeat top left fixed;
+    padding-left: 10%;
 }
 
 #Why-Use-Ultiva .content {
+    width: 80%;
     color: white;
     text-align: left;
-    padding-top: 18%;
 }
 
 #Why-Use-Ultiva .content h3 {
