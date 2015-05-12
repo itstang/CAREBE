@@ -217,6 +217,11 @@ ul li {
     z-index: 1;
 }
 
+#Landing-Page .content h1 {
+  font-size: 20em;
+  margin: 0;
+}
+
 #Landing-Page .ivbag {
   position: absolute;
   height: 900px;
@@ -342,11 +347,18 @@ ul li {
 
 #No-Accumulation {
     background-color: #96DED1;
+    margin-left: 200px;
+}
+
+#No-Accumulation:after {
+    background-image: url('../img/iv-bg-gr.svg');
+    background-repeat: repeat-y;
+    width: 330px;
+    left: -295px;
 }
 
 #No-Accumulation .content {
     color: white;
-    padding-top: 18%;
 }
 
 #No-Accumulation .content ul {
@@ -354,13 +366,19 @@ ul li {
 }
 
 #Synergistic-Effect {
-    background-image: url('../img/background_4.jpg');
-    background-size: cover;
+    background-image: url('../img/background_4.png');
+    background-position: left top;
+    padding-left: 10%;
+    height: 100vh;
+}
+
+#Synergistic-Effect:after {
+  background-image: url('../img/iv-bg.svg');
+  background-repeat: repeat-y;
 }
 
 #Synergistic-Effect .content {
     color: white;
-    padding-top: 15%;
 }
 
 
@@ -380,13 +398,19 @@ ul li {
 }
 
 #Hemodynamics {
-    background-image: url('../img/background_5.jpg');
-    background-size: cover;
+    background-image: url('../img/background_5.png');
+    background-position: left top;
+    padding-left: 10%;
+    height: 100vh;
+}
+
+#Hemodynamics:after {
+  background-image: url('../img/iv-bg.svg');
+  background-repeat: repeat-y;
 }
 
 #Hemodynamics .content {
     color: white;
-    padding-top: 20%;
 }
 
 #Hemodynamics h3 {
@@ -401,6 +425,14 @@ ul li {
 
 #Applicable-Surgeries {
     background-color: #2A2A2A;
+    margin-left: 200px;
+}
+
+#Applicable-Surgeries:after {
+    background-image: url('../img/iv-bg-dark.svg');
+    background-repeat: repeat-y;
+    width: 330px;
+    left: -295px;
 }
 
 #Applicable-Surgeries .wrapper {
@@ -535,8 +567,19 @@ End Surgery page stylings */
 
 
 #End-Page {
-    height: 100vh;
-    background: linear-gradient(180deg, #F4C2C2 50%, #2A2A2A 50%);
+    position: relative;
+    height: 50vh;
+    background: #F4C2C2;
+    padding-top: 50px;
+    margin-left: 200px;
+}
+
+#End-Page:after {
+  content: '';
+  background-image: url('../img/iv-bg-pi.svg');
+  background-repeat: repeat-y;
+  width: 330px;
+  left: -295px;
 }
 
 #Countdown {
@@ -552,6 +595,12 @@ End Surgery page stylings */
     font-size: 1em;
     text-align: center;
     padding-top: 20px;
+}
+
+#Newsletter {
+  background-color: #2a2a2a;
+  height: 50vh;
+  border-top: 10px solid #eee;
 }
 
 #Sign-Up {
