@@ -307,7 +307,7 @@ ul li {
 }
 
 
-/* Surgery page stylings */
+/* Surgery page stylings
 
 
 #Neuro, #Orthopedic, #Cardiothoracic, #Abdominal, #Headneck, #Highrisk {
@@ -366,7 +366,7 @@ ul li {
     padding-left: 7px;
 }
 
-/* End Surgery page stylings */
+End Surgery page stylings */
 
 
 
@@ -377,14 +377,43 @@ ul li {
     background: linear-gradient(180deg, #F4C2C2 50%, #2A2A2A 50%);
 }
 
+#Countdown {
+    padding-top: 40px;
+    color: white;
+}
+
+#Countdown h2 {
+    font-size: 12em;   
+}
+
+#Countdown p {
+    font-size: 1em;
+    text-align: center;
+    padding-top: 20px;
+}
+
 #Sign-Up {
     position: static;
-    padding-top: 15%;
+    padding-top: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 #Sign-Up h3 {
-    text-align: left;   
+    text-align: left;
+    font-size: 4.9em;
+    color: white;
 }
+
+form {
+    padding-top: 20px;
+}
+
+form input {
+    height: 80px;
+    font-size: 45px;
+}
+
 
 
 
